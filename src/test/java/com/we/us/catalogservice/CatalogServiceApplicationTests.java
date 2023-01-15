@@ -22,7 +22,7 @@ class CatalogServiceApplicationTests {
 				.exchange()
 				.expectStatus().isCreated()
 				.expectBody(Book.class).value(savedBook ->{
-					Assertions.assertThat(savedBook).isNull();
+					Assertions.assertThat(savedBook).isNotNull();
 					Assertions.assertThat(savedBook.getIsbn()).isEqualTo(book.getIsbn());
 				});
 	}
