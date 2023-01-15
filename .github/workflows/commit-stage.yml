@@ -23,7 +23,7 @@ jobs:
           with:
             path: "${{github.workspace}}"
             fail-build: false
-            security-cutoff: high
+            severity-cutoff: high
             acs-report-enable: true
         - name: Upload Vulnerability Report
           uses: github/codeql-action/upload-sarif@v2
@@ -31,5 +31,5 @@ jobs:
           with:
             sarif_file: "${{steps.scan.outputs.sarif}}"
         - name: Build,Unit and Integration Test
-          run: ./gradlew
+          run: ./gradlew build
 
