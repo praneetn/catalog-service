@@ -4,7 +4,7 @@ on: push
 jobs:
     build:
       name: Build and Test
-      runs-on: mac
+      runs-on: ubuntu-latest
       permissions:
         contents: read
         security-events: write
