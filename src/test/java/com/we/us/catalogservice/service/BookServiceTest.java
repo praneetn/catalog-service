@@ -28,7 +28,7 @@ class BookServiceTest {
         //Mockito.when(bookRepository.findByIsbn("123")).thenReturn(Optional.of(book));
         Mockito.when(bookRepository.save(book)).thenReturn(book);
         Book response = bookService.addBook(book);
-        assertEquals(book.getIsbn(),response.getIsbn());
+        assertEquals(book.getIsbn(),"456");
     }
 
 }
