@@ -32,3 +32,4 @@ jobs:
             sarif_file: "${{steps.scan.outputs.sarif}}"
         - name: Build,Unit and Integration Test
           run: ./gradlew
+
